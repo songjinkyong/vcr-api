@@ -1,16 +1,22 @@
 {
-  "name": "@allviacl_vcr/api",
-  "author": "vs-software-cell",
-  "version": "1.0.0",
-  "main": "dist/index.js",
+  "type": "module",
+  "name": "@songjinkyong/vcr-api",
+  "author": "songjinkyong",
+  "version": "0.0.0",
+  "exports": {
+    "import": "./dist/index.mjs"
+  },
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc -w"
+    "build": "tsup",
+    "dev": "tsup src/index.ts --watch"
   },
-  "keywords": [],
   "license": "ISC",
   "devDependencies": {
+    "tsup": "^8.3.5",
     "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "nanoid": "^5.0.9"
   }
 }
